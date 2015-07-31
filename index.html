@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body ng-controller="ListaController">
+
+  <table>
+    <thead>
+      <tr>
+        <th>title</th>
+        <th>post</th>
+        <th>answer</th>
+        <th>tag</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="pregunta in preguntas">
+        <td>{{pregunta.nombre}}</td>
+        <td>{{pregunta.question}}</td>
+        <td>{{pregunta.respuesta}}</td>
+        <td>{{pregunta.question}}</td>
+      </tr
+    </tbody>
+  </table>
+
+</body>
+
+</html>
