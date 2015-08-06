@@ -5,6 +5,8 @@ html
 		title= 'Karmaflow'
 		link(rel='stylesheet', href='/stylesheets/materialize.css')
 		link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+		script(src='/javascripts/materialize.js')
+		script(src='/javascripts/materialize.min.js')
 	body
 		.navbar-fixed
 			nav.green
@@ -17,5 +19,4 @@ html
 									input#search(type='search', required='')
 									label(for='search')
 										i.material-icons search
-									i.material-icons close
 		block content
