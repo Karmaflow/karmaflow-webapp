@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title>Angular Material - Starter App</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="assets/app.css"/>
+  </head>
+
+  <body ng-app="starterApp">
+
+  <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z3"  layout="row" ng-controller="QuestionController as ul">
+
+    <md-toolbar layout="row" class="md-whiteframe-z1">
+      <md-button class="menu"  aria-label="Show User List">
+        <md-icon md-svg-icon="menu" ></md-icon>
+      </md-button>
+      <h1>KarmaFlow</h1>
+    </md-toolbar>
+
+    <md-list>
+      <md-list-item ng-repeat="it in ul.questions">
+            <md-button ng-click="ul.selectUser(it)" ng-class="{'selected' : it === ul.selected }">
+                <md-icon md-svg-icon="./assets/svg/heart8.svg" class="avatar">
+                </md-icon>
+                {{it.post}}
+              </md-button>
+
+      </md-list-item>
+    </md-list>
+
+  </div>
+  <div ng-controller="DialogController as dl" >
+       <section layout="row" layout-sm="column" layout-align="center center">
+          <md-button class="md-fab" aria-label="question" ng-click="showAdvanced($event)">
+                   <md-icon md-svg-src="./assets/svg/question.svg"></md-icon>
+          </md-button>
+      </section>
+  </div>
+
+
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
+
+    <link rel='stylesheet' href='./bower_components/textAngular/dist/textAngular.css'>
+    <script src='./bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+    <script src='./bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
+    <script src='./bower_components/textAngular/dist/textAngular.min.js'></script>
+
+    <script src="./src/questions/Question.js"></script>
+    <script src="./src/questions/QuestionController.js"></script>
+    <script src="./src/questions/QuestionService.js"></script>
+
+    <script type="text/javascript">
+
+          angular
+              .module('starterApp', ['ngMaterial', 'questions'])
+              .config(function($mdThemingProvider, $mdIconProvider){
+
+                  $mdIconProvider
+                      .defaultIconSet("./assets/svg/avatars.svg", 128)
+                      .icon("menu"       , "./assets/svg/menu.svg"        , 24)
+                      .icon("share"      , "./assets/svg/share.svg"       , 24)
+                      .icon("google_plus", "./assets/svg/google_plus.svg" , 512)
+                      .icon("hangouts"   , "./assets/svg/hangouts.svg"    , 512)
+                      .icon("twitter"    , "./assets/svg/twitter.svg"     , 512)
+                      .icon("phone"      , "./assets/svg/phone.svg"       , 512);
+
+                      $mdThemingProvider.theme('default')
+                          .primaryPalette('brown')
+                          .accentPalette('red');
+
+              });
+
+    </script>
+
+  </body>
+</html>
