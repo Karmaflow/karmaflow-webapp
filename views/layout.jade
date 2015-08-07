@@ -1,0 +1,22 @@
+doctype html
+html
+	head
+		meta(charset='utf-8' name='viewport' content='width=device-width, initial-scale=1.0')
+		title= 'Karmaflow'
+		link(rel='stylesheet', href='/stylesheets/materialize.css')
+		link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+		script(src='/javascripts/materialize.js')
+		script(src='/javascripts/materialize.min.js')
+	body
+		.navbar-fixed
+			nav.green
+				.nav-wrapper
+					a.brand-logo(href='/') Karmaflow
+					ul.right.hide-on-med-and-down
+						li
+							form
+								.input-field
+									input#search(type='search', required='')
+									label(for='search')
+										i.material-icons search
+		block content

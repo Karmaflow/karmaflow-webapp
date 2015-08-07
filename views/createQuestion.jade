@@ -1,0 +1,37 @@
+extends layout
+
+block content
+	.container
+		h1.header.center.light-green-text Comienza a preguntar
+		.row.center
+			form.col.s12
+				.row
+					.input-field.col.s12
+						input#title(type='text')
+						label(for='title') Título
+				.row
+					.input-field.col.s12
+						textarea#description.materialize-textarea
+						label(for='description') Descripción
+				.row
+					.input-field.col.s6
+						input#tag(type="text")
+						label(for='tag') Tag
+					.input-field.col.s3
+						p
+							input#Primaria.with-gap(name='escolaridad' type='radio')
+							label(for='Primaria') Primaria
+						p
+							input#Secundaria.with-gap(name='escolaridad' type='radio')
+							label(for='Secundaria') Secundaria
+					.input-field.col.s3		
+						p
+							input#Preparatoria.with-gap(name='escolaridad' type='radio')
+							label(for='Preparatoria') Preparatoria
+						p
+							input#Universidad.with-gap(name='escolaridad' type='radio')
+							label(for='Universidad') Universidad
+				.row.center
+					button.btn.waves-effect.waves.green(type='submit' name='go') Preguntar
+						i.material-icons.left done
+
