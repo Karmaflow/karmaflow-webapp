@@ -5,9 +5,18 @@ html
 		title= 'Karmaflow'
 		link(rel='stylesheet', href='/stylesheets/materialize.css')
 		link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+		
+		script(type='text/javascript' src='http://code.jquery.com/jquery.min.js')
+		script(src='/javascripts/angular/angular.js')
 		script(src='/javascripts/materialize.js')
 		script(src='/javascripts/materialize.min.js')
-	body
+		script(src='/javascripts/app.js')
+		script(src='/javascripts/questionController.js')
+		script(src='/javascripts/questionService.js')
+		script(src='/javascripts/custom.js')
+		
+		
+	body(ng-app='karmaflow', ng-controller='QuestionController as qC')
 		.navbar-fixed
 			nav.green
 				.nav-wrapper
@@ -15,8 +24,36 @@ html
 					a.brand-logo(href='/') Karmaflow
 					ul.right.hide-on-med-and-down
 						li
-							form
-								.input-field
-									i.material-icons search
-									input#search(type='search', required='')
-		block content
+							a(href='/createQuestion')
+								i.material-icons search
+						li
+							a(href='/questions')
+								i.material-icons view_module
+						li
+							a(href='/question')
+								i.material-icons refresh
+						li
+							a(href='/searchQuestion')
+								i.material-icons more_vert
+	block content
+	footer.page-footer.green.lighten-2
+		.container
+			.row
+				.col.l6.s12
+					h5.white-text Karmaflow
+					p.grey-text.text-lighten-4 
+				.col.l4.offset-l2.s12
+					h5.white-text Links
+					ul
+						li
+							a.grey-text.text-lighten-3(href='#!') github
+						li
+							a.grey-text.text-lighten-3(href='#!') facebook
+						li
+							a.grey-text.text-lighten-3(href='#!') twitter
+						li
+							a.grey-text.text-lighten-3(href='#!') linkedin
+		.footer-copyright
+			.container
+				© 2014 Copyright Text
+				a.grey-text.text-lighten-4.right(href='#!') More Links
