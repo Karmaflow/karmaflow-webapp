@@ -3,6 +3,13 @@
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+.space {
+  height: 250px;
+  opacity: 1;
+}
+.space img{
+  margin-left: 30%;
+}
 .materialize-red.lighten-5 {
   background-color: #fdeaeb !important; }
 
@@ -1615,7 +1622,8 @@
   background-color: #FFFFFF !important; }
 
 .white-text {
-  color: #FFFFFF !important; }
+  color: #FFFFFF !important;
+  text-shadow: 2px 2px #000; }
 
 .transparent {
   background-color: transparent !important; }
@@ -2102,7 +2110,7 @@ img.responsive-img, video.responsive-video {
   z-index: -1; }
   .parallax img {
     position: absolute;
-    opacity: .9;
+    opacity: 1;
     left: 50%;
     bottom: 0;
     min-width: 100%;
@@ -5247,13 +5255,12 @@ span.badge {
 
 nav {
   color: #fff;
-  opacity: 0.8;
   background-color: #ee6e73;
   width: 100%;
   height: 56px;
   line-height: 56px; }
   nav:hover{
-    opacity: 1;
+    background-color: #1B5E20;
   }
   nav a {
     color: #fff; }
