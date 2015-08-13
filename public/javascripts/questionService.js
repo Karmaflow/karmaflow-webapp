@@ -34,6 +34,25 @@
                 return promise;
     }
 
+    question.getQuestion =function getQuestion (id) {
+        console.log('Question Service');
+        var serializedData = $.param({id:id});
+            var deferred = $q.defer();
+            var promise =  deferred.promise;
+
+            $http({ method: 'GET',
+                     url: 'http://localhost:8000/api/v0.1/question?id='+id
+                     headers:{'Content-Type': 'application/x-www-form-urlencoded'}
+                }).
+                  success(function (data) {
+                        deferred.resolve(data);
+                  }).
+                  error(function (err) {
+                      deferred.reject(err);
+                  });
+                return promise;
+    }
+
 
     question.create = function create (params) {
         console.log(params);

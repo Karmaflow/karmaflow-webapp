@@ -35,6 +35,15 @@ function QuestionController(QuestionService){
           });
 
     }
+    self.getQuestion = function (){
+        console.log('Entrando');
+        QuestionService
+          .getQuestion(self.id)
+          .then(function (response) {
+            console.log(response);
+          });
+
+    }
 
 
 }
