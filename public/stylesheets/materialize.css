@@ -8,8 +8,27 @@
   opacity: 1;
 }
 .space img{
-  margin-left: 30%;
+  margin-left: 20%;
+  width: 125px;
+  height: 120px;
 }
+@media only screen and(max-width: 601px){
+  .space img{
+    display: none;
+    margin-left: 30%;
+    width: 40px;
+    height: 60px;
+  }
+}
+@media only screen and(max-width: 993px){
+  .space img{
+    display: none;
+    margin-left: 30%;
+    width: 60px;
+    height: 80px;
+  }
+}
+
 .materialize-red.lighten-5 {
   background-color: #fdeaeb !important; }
 

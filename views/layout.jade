@@ -15,8 +15,19 @@ html
 					a.brand-logo(href='/') Karmaflow
 					ul.right.hide-on-med-and-down
 						li
+							a(href='/questions') Preguntas
+						li
+							a(href='/createQuestion') Crear
+						li
 							form
 								.input-field
 									i.material-icons search
 									input#search(type='search', required='')
+					ul.right.side-nav
+						li
+							a(href='/search') Buscar
+						li
+							a(href='/questions') Preguntas
+						li
+							a(href='/createQuestion') Nueva pregunta	
 		block content
