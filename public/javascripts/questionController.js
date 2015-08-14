@@ -31,7 +31,7 @@ function QuestionController(QuestionService){
           .getbyTag(self.question)
           .then(function (response) {
             self.questions = response.questions;
-            console.log(response);
+            console.log(self.questions)
           });
 
     }
