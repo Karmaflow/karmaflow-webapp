@@ -2,14 +2,14 @@ extends layout
 
 block content
 	.container
-		h1.header.center.light-green-text Escribe tu pregunta =D
+		h1.header.center.light-green-text Escribe tu pregunta
 		.row.center
 		div
 			form.col.s12(ng-submit = 'qC.submitQuestion()' )
 				.row
 					.input-field.col.s12
 						i.material-icons.prefix question_answer
-						input#title(type='text',placeholder = 'pregunta',ng-model='qC.question.title')
+						input#title(type='text',placeholder = 'Pregunta',ng-model='qC.question.title')
 						label(for='title') Título
 				.row
 					.input-field.col.s12
@@ -20,13 +20,15 @@ block content
 					.input-field.col.s6
 						select.browser-default(ng-model='qC.question.tag', ng-options='item.tag for item in qC.tags')
 						
-					.input-field.col.s6
+					.input-field.col.s3
 						p
 							input#Primaria.with-gap(name='escolaridad' type='radio')
 							label(for='Primaria') Primaria
 						p
 							input#Secundaria.with-gap(name='escolaridad' type='radio')
-							label(for='Secundaria') Secundaria	
+							label(for='Secundaria') Secundaria
+
+					.input-field.col.s3
 						p
 							input#Preparatoria.with-gap(name='escolaridad' type='radio')
 							label(for='Preparatoria') Preparatoria

@@ -9,13 +9,9 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var error = require('./routes/error');
 var createQuestion = require('./routes/createQuestion');
-<<<<<<< HEAD
 var question = require('./routes/question');
 var questions = require('./routes/questions');
-=======
-var questions = require('./routes/questions');
-var question = require('./routes/question');
->>>>>>> pre_release
+
 
 var app = express();
 
@@ -36,13 +32,9 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/error', error);
 app.use('/createQuestion', createQuestion);
-<<<<<<< HEAD
 app.use('/question', question);
 app.use('/questions', questions);
-=======
-app.use('/questions', questions);
-app.use('/question', question);
->>>>>>> pre_release
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
