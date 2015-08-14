@@ -22,7 +22,7 @@
             var promise =  deferred.promise;
 
             $http({ method: 'GET',
-                     url: 'http://localhost:8000/api/v0.1/question/'+params.tag.tag,
+                     url: 'http://localhost:8000/api/v0.1/questions/'+params.tag.tag,
                      headers:{'Content-Type': 'application/x-www-form-urlencoded'}
                 }).
                   success(function (data) {
@@ -41,7 +41,7 @@
             var promise =  deferred.promise;
 
             $http({ method: 'GET',
-                     url: 'http://localhost:8000/api/v0.1/question?id='+id
+                     url: 'http://localhost:8000/api/v0.1/question/'+id,
                      headers:{'Content-Type': 'application/x-www-form-urlencoded'}
                 }).
                   success(function (data) {

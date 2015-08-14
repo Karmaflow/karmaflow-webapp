@@ -18,11 +18,11 @@ block content
 					li.collection-item.avatar(ng-repeat='q in qC.questions')
 						.row
 							.col.s11
-								
-								img.circle(src='images/karma.png', alt='')
-								a.collection-item(href='/question')
+								input(type='hidden', name='id', ng-value="q._id")
+								img.circle(src='images/karma.png')
+								a.collection-item(href="/question/{{q._id}}")
 									span.title {{q.title}}
-									p 
+									p
 									Second {{q.post}}
 							.col.s1		
 								i.material-icons grade

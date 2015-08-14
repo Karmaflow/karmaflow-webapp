@@ -2,9 +2,13 @@ extends layout
 
 block content
 	.container
-		h1.header.center.light-green-text Título de la pregunta
-			.row.center
-				.col.s12
-					.row
-						h2 Descripción
-
+		h1.header.center.light-green-text Preguntas
+			.row
+				
+			.row
+					img.circle(src='images/karma.png', alt='')
+					span.title {{q.title}}
+					p 
+					Second {{q.post}}
+						i.material-icons grade
+						span.badge 19
