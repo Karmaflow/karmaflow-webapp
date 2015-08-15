@@ -27,11 +27,13 @@ block content
 				.row
 					.col.s3.offset-s2.space.white
 						h5.black-text.center Pregunta
-						img(src='/images/ask.png' width=80 height=120)
-						h5.black-text.center Pierde karma
+						a(href='createQuestion')
+							img(src='/images/ask.png' width=80 height=120)
+						h5.black-text.center Ofrece karma
 					.col.s3.offset-s2.space.black
 						h5.white-text.center Responde
-						img(src='/images/response.png' width=125 height=120)
+						a(href='questions')
+							img(src='/images/response.png' width=125 height=120)
 						h5.white-text.center Gana karma	
 		.parallax
 			img(src='/images/classroom.jpeg' width=1600 height=800)
