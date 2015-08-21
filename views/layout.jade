@@ -18,38 +18,39 @@ html
 		
 	body(ng-app='karmaflow', ng-controller='QuestionController as qC')
 		.navbar-fixed
-			nav.green
+			nav.teal.lighten-1
 				.nav-wrapper
-					img(src='/images/karmaflow.png' width=60 height=60)
-					a.brand-logo(href='/') Karmaflow
-					ul.right.hide-on-med-and-down
-						li
-							a(href='/questions')
-								i.material-icons search
-						li
-							a(href='/createQuestion')
-								i.material-icons note_add
-						li
-							a(href='/question')
-								i.material-icons refresh
-	block content
-	footer.page-footer.green
-		.container
-			.row
-				.col.l6.s12
-					h5.white-text Karmaflow
-					p.grey-text.text-lighten-4 
-				.col.l4.offset-l2.s12
-					h5.white-text Links
-					ul
-						li
-							a.grey-text.text-lighten-3(href='https://github.com/Karmaflow') github
-						li
-							a.grey-text.text-lighten-3(href='#!') facebook
-						li
-							a.grey-text.text-lighten-3(href='#!') twitter
-						li
-							a.grey-text.text-lighten-3(href='#!') linkedin
-		.footer-copyright
+					a(href='/')
+						img(src='/images/karmaflow.png' width=60 height=60)
+						a.brand-logo(href='/') Karmaflow
+						ul.right.hide-on-med-and-down
+							li
+								a(href='/questions')
+									i.material-icons search
+							li
+								a(href='/createQuestion')
+									i.material-icons note_add
+							li
+								a(href='/question')
+									i.material-icons refresh
+		block content
+		footer.page-footer.teal.lighten-1
 			.container
-				© 2014 Copyright Text
+				.row
+					.col.l6.s12
+						h5.white-text Karmaflow
+						p.grey-text.text-lighten-4 
+					.col.l4.offset-l2.s12
+						h5.white-text Links
+						ul
+							li
+								a.grey-text.text-lighten-3(href='https://github.com/Karmaflow') github
+							li
+								a.grey-text.text-lighten-3(href='#!') facebook
+							li
+								a.grey-text.text-lighten-3(href='#!') twitter
+							li
+								a.grey-text.text-lighten-3(href='#!') linkedin
+			.footer-copyright
+				.container
+					© 2014 Copyright Text

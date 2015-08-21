@@ -2,7 +2,7 @@ extends layout
 
 block content
 	.container
-		h1.header.center.light-green-text Escribe tu pregunta
+		h1.header.center.light-teal.lighten-2-text Escribe tu pregunta
 		.row.center
 		div
 			form.col.s12(ng-submit = 'qC.submitQuestion()' )
@@ -16,27 +16,12 @@ block content
 						i.material-icons.prefix question_answer
 						textarea#description.materialize-textarea(ng-model='qC.question.post')
 						label(for='description') Descripción
-				.row
-					.input-field.col.s6
+				.row.center
+					h5 Selecciona una tag :)
+					.input-field.col.s6.center
 						select.browser-default(ng-model='qC.question.tag', ng-options='item.tag for item in qC.tags')
-						
-					.input-field.col.s3
-						p
-							input#Primaria.with-gap(name='escolaridad' type='radio')
-							label(for='Primaria') Primaria
-						p
-							input#Secundaria.with-gap(name='escolaridad' type='radio')
-							label(for='Secundaria') Secundaria
-
-					.input-field.col.s3
-						p
-							input#Preparatoria.with-gap(name='escolaridad' type='radio')
-							label(for='Preparatoria') Preparatoria
-						p
-							input#Universidad.with-gap(name='escolaridad' type='radio')
-							label(for='Universidad') Universidad
 				.row.center
 					br
 					br
-					button.btn.waves-effect.waves.green(type='submit' name='go') Preguntar
+					button.btn.waves.teal.lighten-1(type='submit' name='go') Preguntar
 						i.material-icons.left send
